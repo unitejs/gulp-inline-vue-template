@@ -1,0 +1,28 @@
+{
+    "name": "gulp-inline-vue-template",
+    "version": "0.0.1",
+    "description": "Gulp Inline Vue Template Plugin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/unitejs/gulp-inline-vue-template.git"
+    },
+    "keywords": [
+        "unite",
+        "unitejs",
+        "vue",
+        "gulp",
+        "inline"
+    ],
+    "author": "martyn@unitejs.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/unitejs/gulp-inline-vue-template/issues"
+    },
+    "homepage": "https://github.com/unitejs/gulp-inline-vue-template#readme",
+    "dependencies": {
+        "gulp-util": "^3.0.8",
+        "through2": "^2.0.3",
+        "vue-template-compiler": "^2.5.0",
+        "vue-template-es2015-compiler": "^1.6.0"
+    }
+}
