@@ -2,6 +2,8 @@
 
 This plugin will allow you to use url syntax in your template line to compile and inline templates in your source code.
 
+Also any inline templates will be compiled as well.
+
 # Installation
 
 ```
