@@ -1,6 +1,6 @@
 {
     "name": "gulp-inline-vue-template",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Gulp Inline Vue Template Plugin",
     "repository": {
         "type": "git",
@@ -22,7 +22,7 @@
     "dependencies": {
         "gulp-util": "^3.0.8",
         "through2": "^2.0.3",
-        "vue-template-compiler": "^2.5.0",
-        "vue-template-es2015-compiler": "^1.6.0"
+        "vue-template-compiler": "2.4.4",
+        "vue-template-es2015-compiler": "1.6.0"
     }
 }
