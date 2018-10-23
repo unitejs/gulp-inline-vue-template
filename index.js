@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const through = require('through2');
-const gutil = require('gulp-util');
+const PluginError = require('plugin-error');
 const compiler = require('vue-template-compiler');
 const transpile = require('vue-template-es2015-compiler');
 
@@ -51,11 +51,11 @@ function gulpInlineVue(options) {
                 if (templateContents) {
                     contents = contents.replace(templateUrlMatch[0], templateToInline(templateContents[1], templateUrlMatch[1]));
                 } else {
-                    this.emit('error', new gutil.PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n
+                    this.emit('error', new PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n
                        Could not extract the <template></template> tags in the file ${templatePath}`));
                 }
             } catch (err) {
-                this.emit('error', new gutil.PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n   ${err.message}`));
+                this.emit('error', new PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n   ${err.message}`));
             }
         } else {
             try {
@@ -71,7 +71,7 @@ function gulpInlineVue(options) {
                     contents = contents.replace(templateTagMatch[0], templateToInline(templateLiteral, templateTagMatch[1]));
                 }
             } catch (err) {
-                this.emit('error', new gutil.PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n   ${err.message}`));
+                this.emit('error', new PluginError(PLUGIN_NAME, `from ${PLUGIN_NAME} in file ${file.path}:\n   ${err.message}`));
             }
         }
 
